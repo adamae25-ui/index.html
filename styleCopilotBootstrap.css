@@ -1,22 +1,30 @@
-/* HW2 - Bootstrap custom styles */
+/* ===== Bootstrap custom CSS – HW2 ===== */
 
 html, body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+/* Every visible block */
 .box {
   border: 1px solid red;
   box-sizing: border-box;
+  min-height: 100px;
 }
 
-/* Heights to mimic the original layout */
-.h20 { height: 20%; }
-.h40 { height: 40%; }
+/* Heights to mimic original layout */
+.h20 {
+  min-height: 140px;
+}
 
-/* Mobile: stack + reasonable visible height */
+.h40 {
+  min-height: 280px;
+}
+
+/* Mobile behavior */
 @media (max-width: 750px) {
-  .h20, .h40 {
-    height: auto;
-    min-height: 90px;
+  .h20,
+  .h40 {
+    min-height: 120px;
   }
 }
