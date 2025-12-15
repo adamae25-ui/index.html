@@ -1,0 +1,22 @@
+/* HW2 - Bootstrap custom styles */
+
+html, body {
+  height: 100%;
+}
+
+.box {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+/* Heights to mimic the original layout */
+.h20 { height: 20%; }
+.h40 { height: 40%; }
+
+/* Mobile: stack + reasonable visible height */
+@media (max-width: 750px) {
+  .h20, .h40 {
+    height: auto;
+    min-height: 90px;
+  }
+}
