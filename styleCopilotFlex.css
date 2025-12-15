@@ -1,0 +1,58 @@
+/* Part B - Flexbox. IMPORTANT: HTML classes are identical to the plain version. */
+html, body { height: 100%; }
+* { box-sizing: border-box; margin: 0; padding: 5px; }
+
+.page {
+  height: 100%;
+  display: flex;
+}
+
+/* Remove float behavior for flex version */
+[class*="col-"] {
+  border: 1px solid red;
+  float: none;
+}
+
+/* Column widths as flex-basis */
+.col-1  { flex: 0 0 8.33%; }
+.col-2  { flex: 0 0 16.66%; }
+.col-3  { flex: 0 0 25%; }
+.col-4  { flex: 0 0 33.33%; }
+.col-5  { flex: 0 0 41.66%; }
+.col-6  { flex: 0 0 50%; }
+.col-7  { flex: 0 0 58.33%; }
+.col-8  { flex: 0 0 66.66%; }
+.col-9  { flex: 0 0 75%; }
+.col-10 { flex: 0 0 83.33%; }
+.col-11 { flex: 0 0 91.66%; }
+.col-12 { flex: 0 0 100%; }
+
+/* Left/right full height */
+.leftSide, .rightSide { height: 100%; }
+
+/* Right side wraps items into rows */
+.rightSide {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* Heights for items (percent of rightSide height) */
+.smallCol { height: 20%; }
+.biglCol  { height: 40%; }
+
+/* The split big column should stack two halves */
+.biglCol--split {
+  display: flex;
+  flex-direction: column;
+}
+
+.halfCol { flex: 1 1 auto; }
+
+/* Mobile: stack everything */
+@media (max-width: 750px) {
+  .page { flex-direction: column; height: auto; min-height: 100vh; }
+  [class*="col-"] { flex: 0 0 100%; width: 100%; }
+  .leftSide, .rightSide { height: auto; }
+  .smallCol, .biglCol { height: auto; min-height: 90px; }
+}
