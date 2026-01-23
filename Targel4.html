@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College</title>
+    <link rel="stylesheet" href="green.css">
+</head>
+<body>
+
+<form name="CollegeRegistration" onsubmit="return ValidateCollegeRegistration();">
+
+    <fieldset>
+        <h1>College Admissions Calculator</h1>
+
+        <p>
+            <label>age:
+                <input type="number" name="Age">
+            </label>
+        </p>
+
+        <fieldset>
+            <legend>Select from the below options:</legend>
+
+        <label>
+        <input type="radio" name="study" value="PsychometricAndBagrut" onclick="toggleFields();">
+        Psychometric and Bagrut
+        </label>
+
+        <label>
+        <input type="radio" name="study" value="MechinaAndBagrut" onclick="toggleFields();">
+        Mechina and Bagrut
+        </label>
+
+        </fieldset>
+
+        <p>
+            <label>Psychometric Grade:
+                <input type="number" name="PsychometricGrade">
+            </label>
+        </p>
+
+        <p>
+            <label>Bagrut Grade:
+                <input type="number" name="BagrutGrade">
+            </label>
+        </p>
+
+        <p>
+            <label>Mechina Grade:
+                <input type="number" name="MechinaGrade">
+            </label>
+        </p>
+
+        <input type="submit" value="validate">
+        <p id="msg"></p>
+
+
+    </fieldset>
+
+</form>
+
+<script src="scriptTargel4.js"></script>
+
+</body>
+</html>
